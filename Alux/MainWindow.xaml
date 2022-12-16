@@ -1,0 +1,39 @@
+﻿<Window x:Class="Alux.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        Background="Transparent"
+        WindowStyle="None"
+        Title="Alux" Height="720" Width="1280" AllowsTransparency="True" WindowStartupLocation="CenterScreen" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+    <Border CornerRadius="20" BorderBrush="Transparent" BorderThickness="0" Background="#2a2d38">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Alux"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Margin="25,0,0,0"
+                       Foreground="White"
+                       FontSize="40" 
+                       FontFamily="MS Reference Sans Serif"/>
+            <Grid Name="CloseButton" Width="50" Height="50" Background="#2a2d38" HorizontalAlignment="Right" Margin="0,0,15,0" Grid.Column="1" MouseEnter="CloseButton_MouseEnter" MouseLeave="CloseButton_MouseLeave" MouseDown="CloseButton_MouseDown">
+                <Line Name="lineUp" X1="17" Y1="17" X2="33" Y2="33" Stroke="White" StrokeThickness="1"/>
+                <Line Name="lineDown" X1="17" Y1="33" X2="33" Y2="17" Stroke="White" StrokeThickness="1"/>
+            </Grid>
+            <StackPanel VerticalAlignment="Top" Margin="0,20,0,0" Grid.Row="1">
+                <Button Style="{StaticResource menuButton}">
+                    <StackPanel Orientation="Horizontal">
+                        <Icon:PackIconMaterial/>
+                        <TextBlock Text="Home"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
